@@ -26,14 +26,30 @@
 			</nav>
 			<div class="user-block">
 				<div class="search">
-					<span class="visually-hidden">Поиск</span>
-					<!-- Место для формы -->
+					<span class="search-icon" aria-label="Окно поиска"></span>
+					<form class="form search-form" method="get">
+						<label class="visually-hidden" for="search-field" >Поиск</label>
+						<input id="search-field" class="form-field search-form-field" type="search" placeholder="Что ищем?">
+						<button class="button search-form-button" type="submit" hidden>Найти</button>
+					</form>
 				</div>
 				<div class="signup">
-					<span >Вход</span>
-					<!-- Место для формы -->
-					<a href="#">Забыли пароль?</a>
-					<a href="#">Новая регистрация</a>
+					<span class="signup-icon">Вход</span>
+					<form class="form signup-form" method="post" action="https://echo.htmlacademy.ru">
+						<p>
+							<label class="visually-hidden" for="signup-form-email">Емэил</label>
+							<input id="signup-form-email" class="form-field signup-form-field" type="email" name="email" value="" placeholder="Электронная почта">
+						</p>
+						<p>
+							<label class="visually-hidden" for="signup-form-password">Пароль</label>
+							<input id="signup-form-password" class="form-field signup-form-field" type="password" name="password" placeholder="Пароль">
+						</p>
+						<p>
+							<button class="button signup-form-button" type="submit">Войти</button>
+							<a class="signup-form-link" href="#">Забыли пароль?</a>
+							<a class="signup-form-link" href="#">Новая регистрация</a>
+						</p>
+					</form>
 				</div>
 				<div class="basket">
 					<span>Пусто</span>
@@ -107,13 +123,17 @@
 
 			<article class="blog">
 				<h2>Новое в нашем блоге</h2>
-				<a href="">10 способов сервировки фруктовых щербетов к столу</a>
+				<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
 			</article>
 
 				<section class="mailing">
 					<h2 class="visually-hidden">Подписка на рассылку</h2>
 					<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-					<!-- Место для формы -->
+					<form class="form mailing-form" method="post" action="https://echo.htmlacademy.ru">
+						<label class="visually-hidden" for="mailing-email">Емеил</label>
+						<input id="mailing-email" class="form-field mailing-form-field" type="email" name="email" value="" placeholder="Электронная почта">
+						<button class="button mailing-form-button" type="submit">Отправить</button>
+					</form>
 				</section>
 
 				<section class="contacts">
@@ -129,16 +149,16 @@
 						<span class="phone">8 812 450-25-25</span> <br>
 						(с 10 до 20 ежедневно)
 					</p>
-					<a href="#" class="button">Форма обратной связи</a>
+					<a href="#" class="button contacts-button">Форма обратной связи</a>
 				</section>	
 			</main>
 			<footer class="main-footer">
 				<div class="footer-social">
 					<ul>
-						<li><a href="#" class="social-button social-button-twitter">Твиттер</a></li>
-						<li><a href="#" class="social-button social-button-instagram">Инстаграм</a></li>
-						<li><a href="#" class="social-button social-button-facebook">Фейсбук</a></li>
-						<li><a href="#" class="social-button social-button-vkontakte">Вконтакте</a></li>
+						<li><a href="#" class="social-button social-button-twitter" aria-label="Твиттер"></a></li>
+						<li><a href="#" class="social-button social-button-instagram" aria-label="Инстаграм"></a></li>
+						<li><a href="#" class="social-button social-button-facebook" aria-label="Фейсбук"></a></li>
+						<li><a href="#" class="social-button social-button-vkontakte" aria-label="Вконтакте"></a></li>
 					</ul>
 				</div>
 				<ul class="footer-navigation">
@@ -155,7 +175,22 @@
 			<section class="modal modal-feedback">
 				<h2 class="visually-hidden">Форма обратной связи</h2>
 				<b>Мы обязательно вам ответим!</b>
-				<!-- Место для формы -->
+				<form class="form modal-feedback-form" method="post" action="https://echo.htmlacademy.ru">
+					<p>
+						<label class="visually-hidden" for="modal-feedback-form-name">Имя</label>
+						<input id="modal-feedback-form-name" class="form-field modal-feedback-field" type="text" name="name" value="" placeholder="Как вас зовут?">
+					</p>
+					<p>
+						<label class="visually-hidden" for="modal-feedback-form-email">Емэил</label>
+						<input id="modal-feedback-form-email" class="form-field modal-feedback-field" type="email" name="email" value="" placeholder="Ваша почта для ответа?" >
+					</p>
+					<p>
+						<label id="modal-feedback-form-message" class="visually-hidden" for="modal-feedback-form-message">Ваше сообщение</label>
+						<textarea  id="modal-feedback-form-message" class="form-field-area modal-feedback-field-area" cols="30" rows="10" name="message">Напишите что-нибудь...</textarea>
+					</p>
+					<button class="button modal-feedback-form-button" type="submit">Отправить</button>
+				</form>
+				<button class="button-close modal-feedback-close" type="button" aria-label="Закрыть форму обратной связи"></button>
 			</section>
 		</body>
 </html>
