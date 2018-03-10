@@ -26,32 +26,52 @@
 			</nav>
 			<div class="user-block">
 				<div class="search">
-					<span class="visually-hidden">Поиск</span>
-					<!-- Место для формы -->
+					<span class="search-icon" aria-label="Окно поиска"></span>
+					<form class="form search-form" method="get">
+						<label class="visually-hidden" for="search-field" >Поиск</label>
+						<input id="search-field" class="form-field search-form-field" type="search" placeholder="Что ищем?">
+						<button class="button search-form-button" type="submit" hidden>Найти</button>
+					</form>
 				</div>
 				<div class="signup">
-					<span >Вход</span>
-					<!-- Место для формы -->
-					<a href="#">Забыли пароль?</a>
-					<a href="#">Новая регистрация</a>
+					<span class="signup-icon">Вход</span>
+					<form class="form signup-form" method="post" action="https://echo.htmlacademy.ru">
+						<p>
+							<label class="visually-hidden" for="signup-form-email">Емэил</label>
+							<input id="signup-form-email" class="form-field signup-form-field" type="email" name="email" value="" placeholder="Электронная почта">
+						</p>
+						<p>
+							<label class="visually-hidden" for="signup-form-password">Пароль</label>
+							<input id="signup-form-password" class="form-field signup-form-field" type="password" name="password" placeholder="Пароль">
+						</p>
+						<p>
+							<button class="button signup-form-button" type="submit">Войти</button>
+							<a class="signup-form-link" href="#">Забыли пароль?</a>
+							<a class="signup-form-link" href="#">Новая регистрация</a>
+						</p>
+					</form>
 				</div>
 				<div class="basket">
 					<span>2 товара</span>
 					<div class="basket-list">
 						<table>
 							<tr class="basket-list-item">
+								<td><button class="button-close basket-list-item-close" type="button" aria-label="Удалить из корзины"></button> </td>
+								<td><img src="img/basket-item-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
 								<td>Пломбир с апельсиновым джемом</td>
 								<td>1,5 кг x <span class="basket-list-item-price">200 руб.</span></td>
 								<td>300 руб.</td>
 							</tr>
 							<tr class="basket-list-item">
+								<td><button class="button-close basket-list-item-close" type="button" aria-label="Удалить из корзины"></button> </td>
+								<td><img src="img/basket-item-2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
 								<td>Клубничный пломбир с присыпкой из белого шоколада</td>
 								<td>1,5 кг x <span class="basket-list-item-price">300 руб.</span></td>
 								<td>450 руб.</td>
 							</tr>
 						</table>
 						<p>Итого : 750 руб.</p>
-						<a href="#" class="button">Оформить заказ</a>
+						<a href="#" class="button basket-list-button">Оформить заказ</a>
 					</div>
 				</div>
 			</div>
@@ -71,7 +91,68 @@
 
 			<section class="filters">
 				<h2 class="visually-hidden">Фильтр товаров</h2>
-				<!-- Место для формы -->
+				<form class="filters-form" action="get" action="https://echo.htmlacademy.ru">
+					<p>
+						<label for="filters-form-select-sorting">Сортировка:</label>
+						<select id="filters-form-select-sorting" name="sorting-type">
+							<option value="popularity">По популярности</option>
+							<option value="cheapness">Сначала недорогие</option>
+							<option value="high-cost">Сначала дорогие</option>
+							<option value="fat-content">По жирности</option>
+						</select>
+					</p>
+					<p>
+						<label for="filters-form-option-input-range-price">Цена: 100 руб. - 500 руб.</label>
+						<input id="filters-form-option-input-range-price" class="visually-hidden filters-form-option-input filters-form-option-input-range" type="range" min="0" max="1000" step="1">
+					</p>
+					<fieldset>
+						<legend>Жирность</legend>
+						<ul>
+							<li class="filters-form-option">
+								<label for="filters-form-option-input-radio-0">0 %</label>
+								<input id="filters-form-option-input-radio-0" class="visually-hidden filters-form-option-input filters-form-option-input-radio" type="radio" name="fat-content" value="0 %">
+							</li>
+							<li class="filters-form-option">
+								<label for="filters-form-option-input-radio-less-10">до 10 %</label>
+								<input id="filters-form-option-input-radio-less-10" class="visually-hidden filters-form-option-input filters-form-option-input-radio" type="radio" name="fat-content"  value="до 10 %" checked>
+							</li>
+							<li class="filters-form-option">
+								<label for="filters-form-option-input-radio-less-30">до 30 %</label>
+								<input id="filters-form-option-input-radio-less-30" class="visually-hidden filters-form-option-input filters-form-option-input-radio" type="radio" name="fat-content"  value="до 30 %">
+							</li>
+							<li class="filters-form-option">
+								<label for="filters-form-option-input-radio-above-30">выше 30 %</label>
+								<input id="filters-form-option-input-radio-above-30" class="visually-hidden filters-form-option-input filters-form-option-input-radio" type="radio" name="fat-content"  value="выше 30 %">
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend>Наполнители</legend>
+						<ul>
+							<li class="filters-form-option">
+								<label for="filters-form-option-input-checkbox-chocolate">Шоколадные</label>
+								<input id="filters-form-option-input-checkbox-chocolate" class="visually-hidden filters-form-option-input filters-form-option-input-checkbox" type="checkbox" name="chocolate" checked>
+							</li>
+							<li class="filters-form-option">
+								<label for="filters-form-option-input-checkbox-sugar">Сахарные присыпки</label>
+								<input id="filters-form-option-input-checkbox-sugar" class="visually-hidden filters-form-option-input filters-form-option-input-checkbox" type="checkbox" name="sugar" checked>
+							</li>
+							<li class="filters-form-option">
+								<label for="filters-form-option-input-checkbox-fruit">Фрукты</label>
+								<input id="filters-form-option-input-checkbox-fruit" class="visually-hidden filters-form-option-input filters-form-option-input-checkbox" type="checkbox" name="fruit">
+							</li>
+							<li class="filters-form-option">
+								<label for="filters-form-option-input-checkbox-syrup">Сиропы</label>
+								<input id="filters-form-option-input-checkbox-syrup" class="visually-hidden filters-form-option-input filters-form-option-input-checkbox" type="checkbox" name="syrup">
+							</li>
+							<li class="filters-form-option">
+								<label for="filters-form-option-input-checkbox-jam">Джемы</label>
+								<input id="filters-form-option-input-checkbox-jam" class="visually-hidden filters-form-option-input filters-form-option-input-checkbox" type="checkbox" name="jam">
+							</li>
+						</ul>
+					</fieldset>
+					<button class="filters-form-button" type="submit">Применить</button>
+				</form> 
 			</section>
 
 			<section class="catalog">
