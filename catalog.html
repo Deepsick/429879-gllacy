@@ -25,16 +25,16 @@
 				</ul>		
 			</nav>
 			<div class="user-block">
-				<div class="search">
-					<span class="search-icon" aria-label="Окно поиска"></span>
+				<div class="search" tabindex="0">
+					<span class="search-icon" aria-label="Окно поиска" ></span>
 					<form class="form search-form" method="get">
-						<label class="visually-hidden" for="search-field" >Поиск</label>
+						<label class="visually-hidden" for="search-field">Поиск</label>
 						<input id="search-field" class="form-field search-form-field" type="search" placeholder="Что ищем?">
 						<button class="button search-form-button" type="submit" hidden>Найти</button>
 					</form>
 				</div>
-				<div class="signup">
-					<span class="signup-icon">Вход</span>
+				<div class="signup" tabindex="0">
+					<span class="signup-icon" >Вход</span>
 					<form class="form signup-form" method="post" action="https://echo.htmlacademy.ru">
 						<p>
 							<label class="visually-hidden" for="signup-form-email">Емэил</label>
@@ -51,8 +51,8 @@
 						</p>
 					</form>
 				</div>
-				<div class="basket">
-					<span>2 товара</span>
+				<div class="basket" tabindex="0">
+					<span >2 товара</span>
 					<div class="basket-list">
 						<table>
 							<tr class="basket-list-item">
@@ -99,7 +99,7 @@
 
 			<section class="filters">
 				<h2 class="visually-hidden">Фильтр товаров</h2>
-				<form class="filters-form" action="get" action="https://echo.htmlacademy.ru">
+				<form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
 					<p>
 						<label for="filters-form-select-sorting">Сортировка:</label>
 						<select id="filters-form-select-sorting" name="sorting-type">
