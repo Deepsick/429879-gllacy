@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
-	<body>
+	<body class="inner-page">
 		<div class="site-wrapper">
 			<header class="main-header">
 				<nav class="main-navigation">
@@ -25,7 +25,7 @@
 							</ul>
 						</li>
 						<li><a href="#">Доставка и оплата</a></li>
-						<li><a href="#">О компании</a></li>
+						<li><a href="#">О Компании</a></li>
 					</ul>		
 				</nav>
 				<div class="header-right-side">
@@ -35,29 +35,31 @@
 							<form class="form search-form" method="get">
 								<label class="visually-hidden" for="search-field">Поиск</label>
 								<input id="search-field" class="form-field search-form-field" type="search" placeholder="Что ищем?">
-								<button class="button search-form-button" type="submit" hidden>Найти</button>
+								<button class="button search-form-button visually-hidden" type="submit" hidden>Найти</button>
 							</form>
 						</div>
 						<div class="signup" tabindex="0">
-							<span class="signup-icon" >Вход</span>
-							<form class="form signup-form" method="post" action="https://echo.htmlacademy.ru">
-								<p>
-									<label class="visually-hidden" for="signup-form-email">Емэил</label>
-									<input id="signup-form-email" class="form-field signup-form-field" type="email" name="email" value="" placeholder="Электронная почта">
-								</p>
-								<p>
-									<label class="visually-hidden" for="signup-form-password">Пароль</label>
-									<input id="signup-form-password" class="form-field signup-form-field" type="password" name="password" placeholder="Пароль">
-								</p>
-								<p>
-									<button class="button signup-form-button" type="submit">Войти</button>
-									<a class="signup-form-link" href="#">Забыли пароль?</a>
-									<a class="signup-form-link" href="#">Новая регистрация</a>
-								</p>
-							</form>
-						</div>
+								<span class="signup-icon" >Вход</span>
+								<form class="form signup-form" method="post" action="https://echo.htmlacademy.ru">
+									<p>
+										<label class="visually-hidden" for="signup-form-email">Емэил</label>
+										<input id="signup-form-email" class="form-field signup-form-field" type="email" name="email" value="" placeholder="Электронная почта">
+									</p>
+									<p>
+										<label class="visually-hidden" for="signup-form-password">Пароль</label>
+										<input id="signup-form-password" class="form-field signup-form-field" type="password" name="password" placeholder="Пароль">
+									</p>
+									<div class="signup-links-wrapper">
+										<button class="button signup-form-button" type="submit">Войти</button>
+										<div class="sighup-form-user-links">
+												<a class="signup-form-link" href="#">Забыли пароль?</a>
+												<a class="signup-form-link" href="#">Новая регистрация</a>	
+										</div>
+									</div>
+								</form>
+							</div>
 						<div class="basket" tabindex="0">
-							<span >2 товара</span>
+							<span class="basket-icon">2 товара</span>
 							<div class="basket-list">
 								<table>
 									<tr class="basket-list-item">
@@ -68,10 +70,11 @@
 											<img src="img/basket-item-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
 										</td>
 										<td>Пломбир с апельсиновым джемом</td>
-										<td>1,5 кг x <span class="basket-list-item-price">200 руб.</span></td>
+										<td>1,5 кг x <span class="basket-list-item-price">200 руб.</span>
+										</td>
 										<td>300 руб.</td>
 									</tr>
-									<tr class="basket-list-item">
+									<tr class="basket-list-item basket-list-item-strawberry">
 										<td>
 											<button class="button-close basket-list-item-close" type="button" aria-label="Удалить из корзины"></button> 
 										</td>
@@ -83,14 +86,14 @@
 										<td>450 руб.</td>
 									</tr>
 								</table>
-								<p>Итого : 750 руб.</p>
+								<p>Итого: 750 руб.</p>
 								<a href="#" class="button basket-list-button">Оформить заказ</a>
 							</div>
 						</div>
 					</div>
 					<p class="main-header-contacts">
-						С 10 до 20, ежедневно <br>
-						<span class="main-header-contacts-phone">8 812 450-25-25</span> 
+						<span class="main-header-contacts-time">С 10 до 20, ежедневно</span> <br>
+						<span class="main-header-contacts-phone">8 812 450-25-25</span> 	
 					</p>
 				</div>
 			</header>
@@ -109,36 +112,36 @@
 						<p class="sorting">
 							<label for="filters-form-select-sorting">Сортировка:</label>
 							<select id="filters-form-select-sorting" name="sorting-type">
-								<option class="sorting-option" value="popularity">По популярности</option>
+								<option class="sorting-option" value="popularity">по популярности</option>
 								<option class="sorting-option" value="cheapness">Сначала недорогие</option>
 								<option class="sorting-option" value="high-cost">Сначала дорогие</option>
 								<option class="sorting-option" value="fat-content">По жирности</option>
 							</select>
 						</p>
 						<div class="filters-form-price">
-							<label for="filters-form-option-input-range-price">Цена: 100 руб. - 500 руб.</label>
+							<label for="filters-form-option-input-range-price">Цена: 100 руб. – 500 руб.</label>
 							<div class="input-range-bg-wrapper">
-								<input id="filters-form-option-input-range-price" class="filters-form-option-input filters-form-option-input-range" type="range" min="0" max="1000" step="1">
+							<span class="input-range-indicators"></span>
 							</div>
 						</div>
 						<fieldset class="richness">
 							<legend>Жирность:</legend>
 							<ul>
 								<li class="filters-form-option">
-									<label for="filters-form-option-input-radio-0">0 %</label>
 									<input id="filters-form-option-input-radio-0" class="visually-hidden filters-form-option-input filters-form-option-input-radio" type="radio" name="fat-content" value="0 %">
+									<label for="filters-form-option-input-radio-0">0%</label>
 								</li>
 								<li class="filters-form-option">
-									<label for="filters-form-option-input-radio-less-10">до 10 %</label>
 									<input id="filters-form-option-input-radio-less-10" class="visually-hidden filters-form-option-input filters-form-option-input-radio" type="radio" name="fat-content"  value="до 10 %" checked>
+									<label for="filters-form-option-input-radio-less-10">до 10%</label>
 								</li>
 								<li class="filters-form-option">
-									<label for="filters-form-option-input-radio-less-30">до 30 %</label>
 									<input id="filters-form-option-input-radio-less-30" class="visually-hidden filters-form-option-input filters-form-option-input-radio" type="radio" name="fat-content"  value="до 30 %">
+									<label for="filters-form-option-input-radio-less-30">до 30%</label>
 								</li>
 								<li class="filters-form-option">
-									<label for="filters-form-option-input-radio-above-30">выше 30 %</label>
 									<input id="filters-form-option-input-radio-above-30" class="visually-hidden filters-form-option-input filters-form-option-input-radio" type="radio" name="fat-content"  value="выше 30 %">
+									<label for="filters-form-option-input-radio-above-30">выше 30%</label>
 								</li>
 							</ul>
 						</fieldset>
@@ -146,24 +149,24 @@
 							<legend>Наполнители:</legend>
 							<ul>
 								<li class="filters-form-option">
-									<label for="filters-form-option-input-checkbox-chocolate">Шоколадные</label>
 									<input id="filters-form-option-input-checkbox-chocolate" class="visually-hidden filters-form-option-input filters-form-option-input-checkbox" type="checkbox" name="chocolate" checked>
+									<label for="filters-form-option-input-checkbox-chocolate">шоколадные</label>
 								</li>
 								<li class="filters-form-option">
-									<label for="filters-form-option-input-checkbox-sugar">Сахарные присыпки</label>
 									<input id="filters-form-option-input-checkbox-sugar" class="visually-hidden filters-form-option-input filters-form-option-input-checkbox" type="checkbox" name="sugar" checked>
+									<label for="filters-form-option-input-checkbox-sugar">сахарные присыпки</label>
 								</li>
 								<li class="filters-form-option">
-									<label for="filters-form-option-input-checkbox-fruit">Фрукты</label>
 									<input id="filters-form-option-input-checkbox-fruit" class="visually-hidden filters-form-option-input filters-form-option-input-checkbox" type="checkbox" name="fruit">
+									<label for="filters-form-option-input-checkbox-fruit">фрукты</label>
 								</li>
 								<li class="filters-form-option">
-									<label for="filters-form-option-input-checkbox-syrup">Сиропы</label>
 									<input id="filters-form-option-input-checkbox-syrup" class="visually-hidden filters-form-option-input filters-form-option-input-checkbox" type="checkbox" name="syrup">
+									<label for="filters-form-option-input-checkbox-syrup">сиропы</label>
 								</li>
 								<li class="filters-form-option">
-									<label for="filters-form-option-input-checkbox-jam">Джемы</label>
 									<input id="filters-form-option-input-checkbox-jam" class="visually-hidden filters-form-option-input filters-form-option-input-checkbox" type="checkbox" name="jam">
+									<label for="filters-form-option-input-checkbox-jam">джемы</label>
 								</li>
 							</ul>
 						</fieldset>
