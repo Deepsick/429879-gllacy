@@ -1690,7 +1690,7 @@ margin-bottom: 1px;
 .features-item:last-child::before {
 	left: -3px;
 
-	background-image: url("../img/features-thermometer-icon.svg");f
+	background-image: url("../img/features-thermometer-icon.svg");
 }
 
 .blog-mailing-wrapper {
@@ -1842,6 +1842,10 @@ margin-bottom: 1px;
 	background-image: url("../img/map.jpg");
 	background-repeat: no-repeat;
 	background-position: top center;	
+}
+
+.contacts iframe {
+	border: 0;
 }
 
 .contacts-bg-wrapper {
