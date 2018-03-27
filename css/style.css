@@ -360,7 +360,8 @@ input[type="radio"].visually-hidden {
 .user-block .signup-icon:hover,
 .user-block .signup-icon:focus,
 .user-block .basket-icon:hover,
-.user-block .basket-icon:focus {
+.user-block .basket-icon:focus,
+.inner-page .basket-icon {
 	color: #000000;
 
 	background-color: #f8f7f4;
@@ -1904,7 +1905,7 @@ margin-bottom: 1px;
 	margin: 0;
 	padding: 0;
 	margin-left: auto;
-	margin-top: 50px;
+	margin-top: 48px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -2010,7 +2011,7 @@ margin-bottom: 1px;
 }
 
 .inner-page .footer-social {
-	margin-top: 17px;
+	margin-top: 19px;
 }
 
 .footer-social ul {
@@ -2033,7 +2034,7 @@ margin-bottom: 1px;
 }
 
 .inner-page .footer-navigation {
-	margin-top: 10px;
+	margin-top: 12px;
 }
 
 .footer-social ul {
