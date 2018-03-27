@@ -2217,7 +2217,7 @@ margin-bottom: 1px;
 	color: #fefefe;
 }
 
-.footer-copyright::before {
+.footer-copyright a::before {
 	content: "";
 
 	position: absolute;
