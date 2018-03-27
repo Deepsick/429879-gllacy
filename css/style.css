@@ -2217,13 +2217,12 @@ margin-bottom: 1px;
 	color: #fefefe;
 }
 
-.footer-copyright a::before {
-	content: "";
-
+.footer-copyright .logo-htmlacademy {
 	position: absolute;
 	top: 2px;
 	left: 2px;
 
+	display: block;
 	width: 108px;
 	height: 39px;
 
@@ -2231,6 +2230,7 @@ margin-bottom: 1px;
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: contain;
+	border-bottom: 0;
 }
 
 .footer-copyright a {
