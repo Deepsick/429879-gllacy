@@ -27,7 +27,7 @@ buttonClose.addEventListener("click", function(e) {
 form.addEventListener("submit", function(e) {
 	if ( !nameInput.value || !emailInput.value || !messageInput.value) {
 		e.preventDefault();
-		popup.classList.add("modal-error");
+		popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("modal-error");	
 	}  
