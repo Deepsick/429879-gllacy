@@ -303,6 +303,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 8px;
   padding-left: 20px;
   
+  font-weight: 400;
 	color: #fff;
 
 	background-color: #d07058;
@@ -1083,14 +1084,21 @@ input[type="radio"].visually-hidden {
 	display: none;
 }
 
-.filters-form select:hover,
-.filters-form select:focus {
+.filters-form select:hover {
 	color: #323232;
 
-	background-color: #fff;
 	background-image: url("../img/select-arrow-hover.svg");
 	background-repeat: no-repeat;
 	background-position: 166px center;
+}
+
+.filters-form select:focus {
+	color: #323232;
+
+	background-image: url("../img/select-arrow-hover.svg");
+	background-repeat: no-repeat;
+	background-position: 166px center;
+	background-color: #fff;
 }
 
 .filters-form-price label {
@@ -1139,6 +1147,10 @@ input[type="radio"].visually-hidden {
 	background-color: #f8f7f4;
 }
 
+.input-range-indicators {
+	cursor: pointer;
+}
+
 .input-range-indicators::before {
 	content: "";
 
@@ -1172,19 +1184,6 @@ input[type="radio"].visually-hidden {
 .input-range-indicators-min:hover::before,
 .input-range-indicators-max:hover::before {
 	transform: scale(1.1);
-}
-
-.filters-form-option-input + label::before {
-	opacity: 0.8;
-}
-
-.filters-form-option-input:hover + label::before,
-.filters-form-option-input:focus + label::before {
-	opacity: 1;
-}
-
-.filters-form-option-input:disabled + label::before {
-	opacity: 0.4;
 }
 
 .richness {
@@ -1231,6 +1230,19 @@ input[type="radio"].visually-hidden {
 
 .filters-form-option-input-radio:checked + label::before {
 	background-image: url("../img/radio-on.svg");
+}
+
+.filters-form-option-input + label::before {
+	opacity: 0.8;
+}
+
+.filters-form-option-input:hover + label::before,
+.filters-form-option-input:focus + label::before {
+	opacity: 1;
+}
+
+.filters-form-option-input:disabled + label::before {
+	opacity: 0.4;
 }
 
 .fillers {
@@ -1357,6 +1369,8 @@ input[type="radio"].visually-hidden {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	-ms-align-items: flex-start;
+	    align-items: flex-start;
 
 	list-style: none;
 }
@@ -1406,7 +1420,8 @@ input[type="radio"].visually-hidden {
 	background-color: #631a27;
 	background-image: url("../img/background-strawberry.png");
 	background-repeat: no-repeat;
-	background-position: top center;	
+	background-position: top center;
+	background-size: cover;	
 }
 
 .offers-list-item-chocolate {
@@ -1414,6 +1429,7 @@ input[type="radio"].visually-hidden {
 	background-image: url("../img/background-chocolate.png");
 	background-repeat: no-repeat;
 	background-position: top center;
+	background-size: cover;	
 }
 
 .offers-list-item-chocolate h3 {
@@ -1622,7 +1638,7 @@ input[type="radio"].visually-hidden {
 .features {
 	margin-bottom: 40px;
 	padding-right: 20px;
-	padding-bottom: 4px;
+	padding-bottom: 1px;
 	padding-top: 25px;
 	padding-left: 20px;
 
@@ -1638,7 +1654,7 @@ input[type="radio"].visually-hidden {
 .features .description {
 	padding: 0;
 	margin: 0;
-	margin-bottom: 23px;
+	margin-bottom: 20px;
 
 	font-size: 24px;
 	line-height: 30px;
@@ -1707,26 +1723,30 @@ input[type="radio"].visually-hidden {
 }
 
 .blog-mailing-wrapper {
-	margin-bottom: 30px;
+	margin-bottom: 38px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	-ms-align-items:  flex-start;
+	    align-items: flex-start;
 }
 
 .blog {
-	width: 544px;
+	width: 542px;
 	padding-top: 22px;
 	padding-left: 19px;
-	padding-bottom: 90px;
+	padding-bottom: 82px;
 
 	color: #323232;
 
 	background-image: url("../img/background-blog.png");
 	background-repeat: no-repeat;
 	background-position: top center;
+	background-size: cover;
+	border-radius: 15px;
 }
 
 .blog h2 {
@@ -1762,6 +1782,7 @@ input[type="radio"].visually-hidden {
 	background-image: url("../img/bg-mailing.svg");
 	background-repeat: no-repeat;
 	background-position: top center;
+	background-size: cover;
 	border-radius: 15px;
 }
 
@@ -1769,9 +1790,8 @@ input[type="radio"].visually-hidden {
 	margin: 5px;
 	padding-top: 28px;
 	padding-left: 22px;
-	padding-bottom: 34px;
+	padding-bottom: 35px;
 	padding-right: 20px;
-	margin-bottom: 0px;
 
 	background-color: #f8f7f4;
 	border-radius: 15px;
