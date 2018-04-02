@@ -1242,6 +1242,12 @@ input[type="radio"].visually-hidden {
 	opacity: 0.4;
 }
 
+.filters-form-option-input-radio:checked:disabled + label::before {  
+	background-image: url("../img/radio-on.svg");  
+
+	opacity: 0.4;
+}
+
 .fillers {
 	width: 703px;
 
