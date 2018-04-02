@@ -35,7 +35,6 @@ input[type="radio"].visually-hidden {
 	white-space: nowrap;
 
 	-webkit-clip-path: inset(100%);
-
 	        clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
@@ -93,9 +92,7 @@ input[type="radio"].visually-hidden {
  	background-position: top center;
 
   -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
-
   -o-transition: background-image 0.5s ease, background-color 0.5s ease;
-
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
@@ -861,6 +858,7 @@ input[type="radio"].visually-hidden {
 .slide {
 	display: none;
 }
+
 .slider-list {
 	margin: 0;
 	padding: 0;
@@ -999,7 +997,6 @@ input[type="radio"].visually-hidden {
 
 	list-style: none;
 }
-
 
 .filters fieldset,
 .filters legend {
@@ -1287,15 +1284,13 @@ input[type="radio"].visually-hidden {
 	background-image: url("../img/checkbox-off.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	background-size: contain;
-	
+	background-size: contain;	
 }
 
 .filters-form-option-input-checkbox:checked + label::before {
 	width: 24px;
 	
-	background-image: url("../img/checkbox-on.svg");
-	
+	background-image: url("../img/checkbox-on.svg");	
 }
 
 .filters ul,
@@ -1549,8 +1544,7 @@ input[type="radio"].visually-hidden {
 	display: none;
 	padding: 10px 16px;
 
-	border-radius: 20px;
-	
+	border-radius: 20px;	
 }
 
 .catalog-list-item:hover .button,
@@ -1586,7 +1580,6 @@ input[type="radio"].visually-hidden {
 
 	width: 29px;
 	height: 33px;
-
 
 	background-image: url("../img/ruble.svg");
 	background-repeat: no-repeat;
@@ -2483,7 +2476,7 @@ input[type="radio"].visually-hidden {
 	border-radius: 22px;
 }
 
-.modal-feedback-close  {
+.modal-feedback-close {
 	position: absolute;
 	right: 16px;
 	top: 15px;
