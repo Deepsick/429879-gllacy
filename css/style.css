@@ -1307,6 +1307,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filters-form select {
+	width: 190px;
+	
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 500;
@@ -1484,7 +1486,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-list-item:nth-child(5) .catalog-list-item-title {
-	margin-left: 4px;
+	margin-left: 5px;
 }
 
 .catalog-list-item:nth-child(9) .catalog-list-item-title {
